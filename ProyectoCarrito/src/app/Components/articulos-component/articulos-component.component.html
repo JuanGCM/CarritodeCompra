@@ -1,1 +1,24 @@
-<p>articulos-component works!</p>
+<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+    <thead>
+        <tr>
+            
+            <th>Producto</th>
+            <th>Descripcion</th>
+            <th>Color</th>
+            <th>Talla</th>
+            <th>Cantidad</th>
+            <th>Importe</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let producto of listaProductos">
+            
+            <td>{{producto.nombre}}</td>
+            <td>{{producto.descripcion}}</td>
+            <td>{{producto.color}}</td>
+            <td>{{producto.talla}}</td>
+            <td>{{producto.cantidad}}</td>
+            <td>{{producto.precio}}</td>
+        </tr>                   
+    </tbody>
+</table>

@@ -1,4 +1,4 @@
-class Articulo{
+export class Articulo{
 
     nombre:string;
     descripcion:string;

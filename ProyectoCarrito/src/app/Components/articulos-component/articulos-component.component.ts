@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Articulo} from '../../../models/articulo';
 
 @Component({
   selector: 'app-articulos-component',
@@ -7,7 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticulosComponentComponent implements OnInit {
 
-  constructor() { }
+  listaProductos:Articulo[];
+
+  constructor() { 
+    this.listaProductos = [
+      new Articulo('Zapatos','Bota Worker','marron',42,1,20),
+      new Articulo('Sandalias','Sandals con franjas','amarillo',45,2,15),
+      new Articulo('Botines','Botas montañeras','mostaza',42,1,30)
+    ];
+
+  }
 
   ngOnInit(): void {
   }

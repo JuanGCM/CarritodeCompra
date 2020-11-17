@@ -1,7 +1,7 @@
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
     <thead>
         <tr>
-            
+            <th>Nº</th>
             <th>Producto</th>
             <th>Descripcion</th>
             <th>Color</th>
@@ -11,14 +11,16 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let producto of listaProductos">
-            
+        <tr *ngFor="let producto of listaProductos;index as i;">
+            <td>{{i +1}}</td>
             <td>{{producto.nombre}}</td>
             <td>{{producto.descripcion}}</td>
             <td>{{producto.color}}</td>
             <td>{{producto.talla}}</td>
-            <td>{{producto.cantidad}}</td>
-            <td>{{producto.precio}}</td>
+            <td>
+                <input type="number" style="width: 15%;" value="{{producto.cantidad}}">
+                </td>
+            <td>{{producto.precio}} €</td>
         </tr>                   
     </tbody>
 </table>
